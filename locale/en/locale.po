@@ -1,0 +1,163 @@
+# Translation file for Glass Theme
+# Language: English (en)
+# Domain: plugins.themes.glassTheme
+
+msgid ""
+msgstr ""
+"Project-Id-Version: GlassTheme 1.0\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: Glass Theme Team\n"
+"Language-Team: English\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ── Plugin metadata ────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.name"
+msgstr "Glass Theme"
+
+msgid "plugins.themes.glassTheme.description"
+msgstr "A modern glassmorphism theme for OJS 3.5 featuring blurred glass aesthetics, Tailwind CSS 4, smooth transitions, and bilingual support (EN/ID)."
+
+# ── Admin options ──────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.option.accentColor"
+msgstr "Accent Color"
+
+msgid "plugins.themes.glassTheme.option.accentColor.indigo"
+msgstr "Indigo (Default)"
+
+msgid "plugins.themes.glassTheme.option.accentColor.violet"
+msgstr "Violet"
+
+msgid "plugins.themes.glassTheme.option.accentColor.emerald"
+msgstr "Emerald"
+
+msgid "plugins.themes.glassTheme.option.accentColor.rose"
+msgstr "Rose"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity"
+msgstr "Glass Blur Intensity"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity.light"
+msgstr "Light (8px)"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity.medium"
+msgstr "Medium (16px)"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity.heavy"
+msgstr "Heavy (28px)"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode"
+msgstr "Default Color Mode"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode.dark"
+msgstr "Dark"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode.light"
+msgstr "Light"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode.auto"
+msgstr "Auto (follows system)"
+
+# ── Navigation & accessibility ─────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.skipToContent"
+msgstr "Skip to main content"
+
+msgid "plugins.themes.glassTheme.openMenu"
+msgstr "Open navigation menu"
+
+msgid "plugins.themes.glassTheme.closeMenu"
+msgstr "Close navigation menu"
+
+msgid "plugins.themes.glassTheme.toggleTheme"
+msgstr "Toggle dark / light mode"
+
+msgid "plugins.themes.glassTheme.languageSwitcher"
+msgstr "Language switcher"
+
+# ── Hero ───────────────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.hero.currentIssue"
+msgstr "Explore Current Issue"
+
+msgid "plugins.themes.glassTheme.hero.defaultDescription"
+msgstr "A peer-reviewed academic journal committed to publishing high-quality research and advancing scholarly knowledge."
+
+msgid "plugins.themes.glassTheme.openAccess"
+msgstr "Open Access · Peer Reviewed"
+
+msgid "plugins.themes.glassTheme.peerReviewed"
+msgstr "Peer Reviewed"
+
+msgid "plugins.themes.glassTheme.currentIssue"
+msgstr "Current Issue"
+
+msgid "plugins.themes.glassTheme.latestIssue"
+msgstr "Latest Issue"
+
+msgid "plugins.themes.glassTheme.latestNews"
+msgstr "Latest News & Announcements"
+
+msgid "plugins.themes.glassTheme.journalInfo"
+msgstr "Journal Information"
+
+msgid "plugins.themes.glassTheme.frequency"
+msgstr "Publishing Frequency"
+
+msgid "plugins.themes.glassTheme.frequency.biannual"
+msgstr "Biannual"
+
+msgid "plugins.themes.glassTheme.articleInfo"
+msgstr "Article Information"
+
+# ── Article cards ──────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.readMore"
+msgstr "Read More"
+
+msgid "plugins.themes.glassTheme.viewAllArticles"
+msgstr "View All Articles"
+
+# ── Issue archive ──────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.browseContent"
+msgstr "Browse Content"
+
+msgid "plugins.themes.glassTheme.archiveSubtitle"
+msgstr "Explore all published volumes and issues of this journal."
+
+msgid "plugins.themes.glassTheme.viewIssue"
+msgstr "View Issue"
+
+msgid "plugins.themes.glassTheme.noIssues"
+msgstr "No issues have been published yet. Please check back later."
+
+# ── Search ─────────────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.search.heading"
+msgstr "Search the Journal"
+
+msgid "plugins.themes.glassTheme.search.placeholder"
+msgstr "Search by title, author, keyword…"
+
+msgid "plugins.themes.glassTheme.search.tip"
+msgstr "Press"
+
+msgid "plugins.themes.glassTheme.search.tip1"
+msgstr "Search by title or keywords to find specific research topics."
+
+msgid "plugins.themes.glassTheme.search.tip2"
+msgstr "Enter an author's name to find all their published works."
+
+msgid "plugins.themes.glassTheme.search.tip3"
+msgstr "Use quotes for exact phrases, e.g. \"climate change\"."
+
+msgid "plugins.themes.glassTheme.search.results"
+msgstr "{$count} results found for \"{$query}\""
+
+msgid "plugins.themes.glassTheme.search.noResults"
+msgstr "No results found for \"{$query}\""
+
+msgid "plugins.themes.glassTheme.search.noResultsHeading"
+msgstr "No matching articles found"
+
+msgid "plugins.themes.glassTheme.search.noResultsHint"
+msgstr "Try different keywords, check your spelling, or browse the issue archive."

@@ -1,0 +1,115 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <!-- Deep navy background gradient -->
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%"   stop-color="#04071a"/>
+      <stop offset="50%"  stop-color="#0f172a"/>
+      <stop offset="100%" stop-color="#1e293b"/>
+    </linearGradient>
+
+    <!-- Accent glow gradients -->
+    <radialGradient id="orb1" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#6366f1" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#6366f1" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb2" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#10b981" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="orb3" cx="50%" cy="50%" r="50%">
+      <stop offset="0%"   stop-color="#8b5cf6" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </radialGradient>
+
+    <!-- Grid line pattern -->
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none"
+            stroke="rgba(255,255,255,0.04)" stroke-width="1"/>
+    </pattern>
+
+    <!-- Dot pattern -->
+    <pattern id="dots" width="30" height="30" patternUnits="userSpaceOnUse">
+      <circle cx="1.5" cy="1.5" r="1.5" fill="rgba(255,255,255,0.06)"/>
+    </pattern>
+
+    <!-- Blur filter for orbs -->
+    <filter id="blur-heavy" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="60"/>
+    </filter>
+    <filter id="blur-mid" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="40"/>
+    </filter>
+    <filter id="blur-soft" x="-30%" y="-30%" width="160%" height="160%">
+      <feGaussianBlur stdDeviation="25"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1440" height="900" fill="url(#bg)"/>
+
+  <!-- Grid overlay -->
+  <rect width="1440" height="900" fill="url(#grid)"/>
+
+  <!-- Dot overlay (offset) -->
+  <rect width="1440" height="900" fill="url(#dots)" opacity="0.5"/>
+
+  <!-- Ambient glow orbs -->
+  <ellipse cx="200"  cy="180" rx="420" ry="420" fill="url(#orb1)" filter="url(#blur-heavy)"/>
+  <ellipse cx="1280" cy="700" rx="360" ry="360" fill="url(#orb2)" filter="url(#blur-heavy)"/>
+  <ellipse cx="900"  cy="120" rx="280" ry="280" fill="url(#orb3)" filter="url(#blur-mid)"/>
+  <ellipse cx="1100" cy="350" rx="180" ry="180" fill="url(#orb1)" filter="url(#blur-mid)" opacity="0.5"/>
+  <ellipse cx="340"  cy="700" rx="200" ry="200" fill="url(#orb2)" filter="url(#blur-soft)" opacity="0.45"/>
+
+  <!-- Decorative floating glass card shapes (abstract) -->
+  <!-- Large card hint — top-right -->
+  <rect x="980" y="60" width="380" height="240" rx="20"
+        fill="rgba(255,255,255,0.03)" stroke="rgba(255,255,255,0.07)"
+        stroke-width="1" transform="rotate(-8 1170 180)"/>
+
+  <!-- Medium card — bottom-left -->
+  <rect x="60" y="580" width="280" height="180" rx="16"
+        fill="rgba(255,255,255,0.025)" stroke="rgba(255,255,255,0.06)"
+        stroke-width="1" transform="rotate(6 200 670)"/>
+
+  <!-- Small card — center-right -->
+  <rect x="1100" y="480" width="200" height="130" rx="14"
+        fill="rgba(99,102,241,0.06)" stroke="rgba(99,102,241,0.12)"
+        stroke-width="1" transform="rotate(-4 1200 545)"/>
+
+  <!-- Subtle horizontal lines (motion feel) -->
+  <line x1="0" y1="300" x2="400" y2="300"
+        stroke="rgba(99,102,241,0.08)" stroke-width="1"/>
+  <line x1="1040" y1="520" x2="1440" y2="520"
+        stroke="rgba(16,185,129,0.07)" stroke-width="1"/>
+  <line x1="600" y1="750" x2="900" y2="750"
+        stroke="rgba(139,92,246,0.07)" stroke-width="1"/>
+
+  <!-- Constellation dots -->
+  <g fill="rgba(255,255,255,0.18)">
+    <circle cx="820"  cy="200" r="2"/>
+    <circle cx="860"  cy="170" r="1.5"/>
+    <circle cx="900"  cy="210" r="1"/>
+    <circle cx="760"  cy="240" r="1.5"/>
+    <circle cx="1200" cy="300" r="2"/>
+    <circle cx="1240" cy="260" r="1"/>
+    <circle cx="1180" cy="330" r="1.5"/>
+    <circle cx="300"  cy="450" r="1.5"/>
+    <circle cx="330"  cy="410" r="1"/>
+    <circle cx="270"  cy="480" r="2"/>
+  </g>
+
+  <!-- Connecting lines between dots (constellation) -->
+  <g stroke="rgba(255,255,255,0.07)" stroke-width="1">
+    <line x1="820" y1="200" x2="860" y2="170"/>
+    <line x1="860" y1="170" x2="900" y2="210"/>
+    <line x1="820" y1="200" x2="760" y2="240"/>
+    <line x1="1200" y1="300" x2="1240" y2="260"/>
+    <line x1="1200" y1="300" x2="1180" y2="330"/>
+    <line x1="300"  y1="450" x2="330" y2="410"/>
+    <line x1="300"  y1="450" x2="270" y2="480"/>
+  </g>
+
+  <!-- Top-edge glow bar -->
+  <rect x="0" y="0" width="1440" height="2"
+        fill="url(#orb1)" opacity="0.6"/>
+</svg>

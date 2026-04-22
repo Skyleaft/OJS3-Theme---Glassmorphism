@@ -1,0 +1,46 @@
+# ─── Node ─────────────────────────────────────────────────────────────────────
+node_modules/
+.pnpm-store/
+.npm/
+
+# ─── Build logs ───────────────────────────────────────────────────────────────
+npm-debug.log*
+pnpm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+*.log
+
+# ─── Editor & OS ──────────────────────────────────────────────────────────────
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+.idea/
+.vscode/settings.json
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# ─── NOTE: styles/glass-theme.css is intentionally committed ──────────────────
+# OJS production servers do not run Node build steps.
+# The compiled CSS must be present in the repo for deployment.
+# styles/glass-theme.css  ← do NOT add this
+
+# ─── Tailwind source partials (not needed at runtime) ─────────────────────────
+# tailwind.css is source only; the compiled output is styles/glass-theme.css
+# If you want to exclude the source from the deployed plugin:
+# tailwind.css
+# styles/_components.css
+
+# ─── Temp / misc ──────────────────────────────────────────────────────────────
+*.tmp
+*.bak
+*.orig
+.cache/
+dist/

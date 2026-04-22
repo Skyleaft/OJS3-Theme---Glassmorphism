@@ -1,0 +1,163 @@
+# Translation file for Glass Theme
+# Language: Indonesian (id)
+# Domain: plugins.themes.glassTheme
+
+msgid ""
+msgstr ""
+"Project-Id-Version: GlassTheme 1.0\n"
+"PO-Revision-Date: 2024-01-01 00:00+0000\n"
+"Last-Translator: Glass Theme Team\n"
+"Language-Team: Indonesian\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+# ── Plugin metadata ────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.name"
+msgstr "Glass Theme"
+
+msgid "plugins.themes.glassTheme.description"
+msgstr "Tema glassmorfisme modern untuk OJS 3.5 dengan tampilan kaca buram, Tailwind CSS 4, transisi halus, dan dukungan dwibahasa (EN/ID)."
+
+# ── Admin options ──────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.option.accentColor"
+msgstr "Warna Aksen"
+
+msgid "plugins.themes.glassTheme.option.accentColor.indigo"
+msgstr "Indigo (Default)"
+
+msgid "plugins.themes.glassTheme.option.accentColor.violet"
+msgstr "Violet"
+
+msgid "plugins.themes.glassTheme.option.accentColor.emerald"
+msgstr "Zamrud"
+
+msgid "plugins.themes.glassTheme.option.accentColor.rose"
+msgstr "Mawar"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity"
+msgstr "Intensitas Blur Kaca"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity.light"
+msgstr "Ringan (8px)"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity.medium"
+msgstr "Sedang (16px)"
+
+msgid "plugins.themes.glassTheme.option.blurIntensity.heavy"
+msgstr "Berat (28px)"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode"
+msgstr "Mode Warna Default"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode.dark"
+msgstr "Gelap"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode.light"
+msgstr "Terang"
+
+msgid "plugins.themes.glassTheme.option.defaultColorMode.auto"
+msgstr "Otomatis (mengikuti sistem)"
+
+# ── Navigation & accessibility ─────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.skipToContent"
+msgstr "Lewati ke konten utama"
+
+msgid "plugins.themes.glassTheme.openMenu"
+msgstr "Buka menu navigasi"
+
+msgid "plugins.themes.glassTheme.closeMenu"
+msgstr "Tutup menu navigasi"
+
+msgid "plugins.themes.glassTheme.toggleTheme"
+msgstr "Ganti mode gelap / terang"
+
+msgid "plugins.themes.glassTheme.languageSwitcher"
+msgstr "Pilih bahasa"
+
+# ── Hero ───────────────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.hero.currentIssue"
+msgstr "Jelajahi Edisi Terkini"
+
+msgid "plugins.themes.glassTheme.hero.defaultDescription"
+msgstr "Jurnal akademik yang tinjauan sejawat, berkomitmen menerbitkan penelitian berkualitas tinggi dan memajukan pengetahuan ilmiah."
+
+msgid "plugins.themes.glassTheme.openAccess"
+msgstr "Akses Terbuka · Tinjauan Sejawat"
+
+msgid "plugins.themes.glassTheme.peerReviewed"
+msgstr "Tinjauan Sejawat"
+
+msgid "plugins.themes.glassTheme.currentIssue"
+msgstr "Edisi Terkini"
+
+msgid "plugins.themes.glassTheme.latestIssue"
+msgstr "Edisi Terbaru"
+
+msgid "plugins.themes.glassTheme.latestNews"
+msgstr "Berita & Pengumuman Terbaru"
+
+msgid "plugins.themes.glassTheme.journalInfo"
+msgstr "Informasi Jurnal"
+
+msgid "plugins.themes.glassTheme.frequency"
+msgstr "Frekuensi Terbit"
+
+msgid "plugins.themes.glassTheme.frequency.biannual"
+msgstr "Dua kali setahun"
+
+msgid "plugins.themes.glassTheme.articleInfo"
+msgstr "Informasi Artikel"
+
+# ── Article cards ──────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.readMore"
+msgstr "Baca Selengkapnya"
+
+msgid "plugins.themes.glassTheme.viewAllArticles"
+msgstr "Lihat Semua Artikel"
+
+# ── Issue archive ──────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.browseContent"
+msgstr "Jelajahi Konten"
+
+msgid "plugins.themes.glassTheme.archiveSubtitle"
+msgstr "Jelajahi semua volume dan edisi yang telah diterbitkan dalam jurnal ini."
+
+msgid "plugins.themes.glassTheme.viewIssue"
+msgstr "Lihat Edisi"
+
+msgid "plugins.themes.glassTheme.noIssues"
+msgstr "Belum ada edisi yang diterbitkan. Silakan kembali lagi nanti."
+
+# ── Search ─────────────────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.search.heading"
+msgstr "Cari di Jurnal"
+
+msgid "plugins.themes.glassTheme.search.placeholder"
+msgstr "Cari berdasarkan judul, penulis, kata kunci…"
+
+msgid "plugins.themes.glassTheme.search.tip"
+msgstr "Tekan"
+
+msgid "plugins.themes.glassTheme.search.tip1"
+msgstr "Cari berdasarkan judul atau kata kunci untuk menemukan topik penelitian tertentu."
+
+msgid "plugins.themes.glassTheme.search.tip2"
+msgstr "Masukkan nama penulis untuk menemukan semua karya yang telah diterbitkan."
+
+msgid "plugins.themes.glassTheme.search.tip3"
+msgstr "Gunakan tanda kutip untuk frasa tepat, mis. \"perubahan iklim\"."
+
+msgid "plugins.themes.glassTheme.search.results"
+msgstr "{$count} hasil ditemukan untuk \"{$query}\""
+
+msgid "plugins.themes.glassTheme.search.noResults"
+msgstr "Tidak ada hasil untuk \"{$query}\""
+
+msgid "plugins.themes.glassTheme.search.noResultsHeading"
+msgstr "Tidak ada artikel yang cocok"
+
+msgid "plugins.themes.glassTheme.search.noResultsHint"
+msgstr "Coba kata kunci lain, periksa ejaan, atau jelajahi arsip edisi."
