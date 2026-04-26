@@ -1000,23 +1000,22 @@ body {
   top: calc(100% + 0.625rem);
   right: 0;
   min-width: 14rem;
-  background: var(--nav-scrolled-bg);
-  -webkit-backdrop-filter: blur(calc(var(--glass-blur) * 1.5)) saturate(160%);
-  backdrop-filter: blur(calc(var(--glass-blur) * 1.5)) saturate(160%);
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur, 20px)) saturate(120%);
+  backdrop-filter: blur(var(--glass-blur, 20px)) saturate(120%);
   border: 1px solid var(--glass-border);
   border-radius: 0.75rem;
   box-shadow: var(--glass-shadow-lg);
   opacity: 0;
-  transform: translateY(-10px) scale(0.96);
+  transform: translateY(-10px) scale(0.96) translateZ(0);
   pointer-events: none;
   transition: opacity 0.25s ease, transform 0.25s cubic-bezier(0.4, 0, 0.2, 1);
   z-index: 200;
-  overflow: hidden;
   padding: 0.5rem;
 }
 .user-dropdown.open {
   opacity: 1;
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1) translateZ(0);
   pointer-events: auto;
 }
 .user-dropdown-header {
