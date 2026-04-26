@@ -161,3 +161,111 @@ msgstr "Tidak ada artikel yang cocok"
 
 msgid "plugins.themes.glassTheme.search.noResultsHint"
 msgstr "Coba kata kunci lain, periksa ejaan, atau jelajahi arsip edisi."
+
+# ── Common & Overrides ──────────────────────────────────────────────────────────
+msgid "navigation.homePage"
+msgstr "Beranda"
+
+msgid "navigation.archives"
+msgstr "Arsip"
+
+msgid "navigation.about"
+msgstr "Tentang"
+
+msgid "navigation.site"
+msgstr "Navigasi Situs"
+
+msgid "common.copyright"
+msgstr "Hak Cipta"
+
+msgid "common.publishedWith"
+msgstr "Diterbitkan dengan"
+
+msgid "about.aboutTheJournal"
+msgstr "Tentang Jurnal"
+
+msgid "about.editorialTeam"
+msgstr "Tim Editorial"
+
+msgid "about.submissions"
+msgstr "Kiriman"
+
+msgid "about.contact"
+msgstr "Kontak"
+
+msgid "about.privacyStatement"
+msgstr "Pernyataan Privasi"
+
+msgid "user.profile"
+msgstr "Profil Saya"
+
+msgid "user.login"
+msgstr "Login"
+
+msgid "user.register"
+msgstr "Daftar"
+
+msgid "user.logOut"
+msgstr "Logout"
+
+msgid "author.submit"
+msgstr "Kirim Artikel"
+
+msgid "submission.read"
+msgstr "Baca"
+
+msgid "journal.pIssn"
+msgstr "p-ISSN"
+
+msgid "journal.eIssn"
+msgstr "e-ISSN"
+
+# ── Login & Register ───────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.login.welcomeBack"
+msgstr "Senang melihat Anda kembali. Silakan masuk ke akun Anda."
+
+msgid "plugins.themes.glassTheme.login.noAccount"
+msgstr "Belum punya akun?"
+
+msgid "plugins.themes.glassTheme.login.registerNow"
+msgstr "Daftar sekarang"
+
+msgid "plugins.themes.glassTheme.register.alreadyHaveAccount"
+msgstr "Sudah memiliki akun?"
+
+msgid "plugins.themes.glassTheme.register.instruction"
+msgstr "Silakan lengkapi formulir di bawah ini untuk membuat akun baru."
+
+msgid "plugins.themes.glassTheme.register.as"
+msgstr "Daftar sebagai..."
+
+msgid "about.aboutTheJournal.noDescription"
+msgstr "Deskripsi jurnal belum tersedia."
+
+msgid "about.editorialTeam.noTeam"
+msgstr "Informasi tim editorial belum tersedia."
+
+msgid "about.privacyStatement.noStatement"
+msgstr "Pernyataan privasi belum tersedia."
+
+# ── Core Overrides ────────────────────────────────────────────────────────────
+msgid "user.login.rememberMe"
+msgstr "Ingat saya"
+
+msgid "about.onlineSubmissions"
+msgstr "Penyerahan Naskah Online"
+
+msgid "about.onlineSubmissions.submitPost"
+msgstr "Kirim Naskah Sekarang"
+
+msgid "about.onlineSubmissions.registration"
+msgstr "Daftar untuk Penyerahan"
+
+msgid "user.register.privacyConsent"
+msgstr "Ya, saya setuju data saya dikumpulkan dan disimpan sesuai dengan <a href=\"{$privacyUrl}\" target=\"_blank\">pernyataan privasi</a>."
+
+msgid "user.register.repeatPassword"
+msgstr "Ulangi Kata Sandi"
+
+msgid "common.selectCountry"
+msgstr "Pilih Negara"

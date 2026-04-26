@@ -73,7 +73,7 @@
                 {else}
                     <li class="nav-link-item">
                         <a class="nav-link"
-                           href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='login'}">
+                           href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login'}">
                             {translate key="user.login"}
                         </a>
                     </li>
@@ -128,7 +128,7 @@
                        href="{if $isUserLoggedIn}
                                   {url router=PKP\core\PKPApplication::ROUTE_PAGE page='submission'}
                               {else}
-                                  {url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='register'}
+                                  {url router=PKP\core\PKPApplication::ROUTE_PAGE page='register'}
                               {/if}">
                         {if $isUserLoggedIn}
                             {translate key="author.submit"}
@@ -172,7 +172,7 @@
                 {if !$isUserLoggedIn}
                 <li>
                     <a class="glass-btn glass-btn-primary" style="margin-top:.75rem;width:100%;justify-content:center;"
-                       href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='login'}">
+                       href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login'}">
                         {translate key="user.login"}
                     </a>
                 </li>

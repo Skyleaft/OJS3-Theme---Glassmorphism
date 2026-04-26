@@ -161,3 +161,111 @@ msgstr "No matching articles found"
 
 msgid "plugins.themes.glassTheme.search.noResultsHint"
 msgstr "Try different keywords, check your spelling, or browse the issue archive."
+
+# ── Common & Overrides ──────────────────────────────────────────────────────────
+msgid "navigation.homePage"
+msgstr "Home"
+
+msgid "navigation.archives"
+msgstr "Archives"
+
+msgid "navigation.about"
+msgstr "About"
+
+msgid "navigation.site"
+msgstr "Site Navigation"
+
+msgid "common.copyright"
+msgstr "Copyright"
+
+msgid "common.publishedWith"
+msgstr "Published with"
+
+msgid "about.aboutTheJournal"
+msgstr "About the Journal"
+
+msgid "about.editorialTeam"
+msgstr "Editorial Team"
+
+msgid "about.submissions"
+msgstr "Submissions"
+
+msgid "about.contact"
+msgstr "Contact"
+
+msgid "about.privacyStatement"
+msgstr "Privacy Statement"
+
+msgid "user.profile"
+msgstr "My Profile"
+
+msgid "user.login"
+msgstr "Login"
+
+msgid "user.register"
+msgstr "Register"
+
+msgid "user.logOut"
+msgstr "Logout"
+
+msgid "author.submit"
+msgstr "Make a Submission"
+
+msgid "submission.read"
+msgstr "Read"
+
+msgid "journal.pIssn"
+msgstr "p-ISSN"
+
+msgid "journal.eIssn"
+msgstr "e-ISSN"
+
+# ── Login & Register ───────────────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.login.welcomeBack"
+msgstr "Great to see you again. Please sign in to your account."
+
+msgid "plugins.themes.glassTheme.login.noAccount"
+msgstr "Don't have an account yet?"
+
+msgid "plugins.themes.glassTheme.login.registerNow"
+msgstr "Register now"
+
+msgid "plugins.themes.glassTheme.register.alreadyHaveAccount"
+msgstr "Already have an account?"
+
+msgid "plugins.themes.glassTheme.register.instruction"
+msgstr "Please complete the form below to create a new account."
+
+msgid "plugins.themes.glassTheme.register.as"
+msgstr "Register as..."
+
+msgid "about.aboutTheJournal.noDescription"
+msgstr "The journal description is not available yet."
+
+msgid "about.editorialTeam.noTeam"
+msgstr "The editorial team information is not available yet."
+
+msgid "about.privacyStatement.noStatement"
+msgstr "The privacy statement is not available yet."
+
+# ── Core Overrides ────────────────────────────────────────────────────────────
+msgid "user.login.rememberMe"
+msgstr "Remember me"
+
+msgid "about.onlineSubmissions"
+msgstr "Online Submissions"
+
+msgid "about.onlineSubmissions.submitPost"
+msgstr "Submit Now"
+
+msgid "about.onlineSubmissions.registration"
+msgstr "Register to Submit"
+
+msgid "user.register.privacyConsent"
+msgstr "Yes, I agree to have my data collected and stored according to the <a href=\"{$privacyUrl}\" target=\"_blank\">privacy statement</a>."
+
+msgid "user.register.repeatPassword"
+msgstr "Repeat Password"
+
+msgid "common.selectCountry"
+msgstr "Select Country"
