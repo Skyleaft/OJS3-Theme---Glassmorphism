@@ -1,9 +1,6 @@
-/**
- * Glass Theme — Tailwind CSS 4 Source
- * Build: npm run build
- */
-
 @import "tailwindcss";
+
+@source "./templates/**/*.tpl";
 
 @theme {
     --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
@@ -30,5 +27,5 @@
     --radius-glass-sm: 0.625rem;
 }
 
-/* Import our hand-crafted component CSS from glass-theme.css source above */
-@import "./styles/glass-theme.css";
+/* Import our hand-crafted component CSS source */
+@import "./styles/src/manual.css";
