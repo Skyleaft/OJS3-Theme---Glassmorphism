@@ -100,10 +100,10 @@
 
                         {* Confirm Password *}
                         <div>
-                            <label for="confirmPassword" style="display: block; font-size: .75rem; font-weight: 700; color: var(--color-accent-light); text-transform: uppercase; margin-bottom: .5rem;">
+                            <label for="password2" style="display: block; font-size: .75rem; font-weight: 700; color: var(--color-accent-light); text-transform: uppercase; margin-bottom: .5rem;">
                                 {translate key="user.register.repeatPassword"} <span style="color: #fca5a5;">*</span>
                             </label>
-                            <input type="password" name="confirmPassword" id="confirmPassword" class="glass-input" required autocomplete="new-password">
+                            <input type="password" name="password2" id="password2" class="glass-input" required autocomplete="new-password">
                         </div>
                     </div>
 

@@ -35,6 +35,7 @@ class GlassThemePlugin extends ThemePlugin
      */
     public function init(): void
     {
+        // error_log('GlassThemePlugin: init() called');
         // Inherit every template & style from the default OJS theme.
         // We only override what we explicitly need to.
         $this->setParent('defaultTheme');
@@ -82,9 +83,21 @@ class GlassThemePlugin extends ThemePlugin
         // ── Dynamic CSS Variables from Options ────────────────────────────
         $this->addStyle('glass-dynamic-vars', $this->buildDynamicVars(), ['inline' => true]);
 
-        // ── Scripts ───────────────────────────────────────────────────────
-        $this->addScript('glass-theme', 'js/glass-theme.js', ['priority' => STYLE_SEQUENCE_LAST]);
+        // ── Template Data ─────────────────────────────────────────────────
+        \PKP\plugins\Hook::add('TemplateManager::display', [$this, 'loadTemplateData']);
     }
+
+    /**
+     * Pass theme options to Smarty templates
+     */
+    public function loadTemplateData($hookName, $args)
+    {
+        $templateMgr = $args[0];
+        $templateMgr->assign('colorMode', $this->getOption(self::OPTION_DEFAULT_MODE) ?? 'dark');
+        return false;
+    }
+
+
 
     /**
      * Build inline CSS variables based on active theme options.
@@ -115,11 +128,11 @@ class GlassThemePlugin extends ThemePlugin
 
         return "
 :root {
-    --glass-accent:       {$base};
-    --glass-accent-dark:  {$dark};
-    --glass-accent-light: {$light};
-    --glass-blur:         {$blurVal};
-    --glass-default-scheme: '{$defaultScheme}';
+    --glass-accent:       {$base} !important;
+    --glass-accent-dark:  {$dark} !important;
+    --glass-accent-light: {$light} !important;
+    --glass-blur:         {$blurVal} !important;
+    --glass-default-scheme: '{$defaultScheme}' !important;
 }";
     }
 

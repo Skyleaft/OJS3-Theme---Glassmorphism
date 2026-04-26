@@ -43,8 +43,7 @@
                             class="glass-btn glass-btn-primary">
                             {translate key="about.onlineSubmissions.submitPost"}
                         </a>
-                        <a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='register'}"
-                            class="glass-btn glass-btn-ghost">
+                        <a href="{url page="user" op="register" source=$source}" class="glass-btn glass-btn-ghost">
                             {translate key="about.onlineSubmissions.registration"}
                         </a>
                     </div>

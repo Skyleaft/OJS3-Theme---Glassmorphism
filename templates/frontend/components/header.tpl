@@ -3,8 +3,31 @@
  *
  * Glass Theme — Sticky glassmorphism navigation header
  *}
+{capture assign="initialTheme"}{if $colorMode == 'light'}light{elseif $colorMode == 'dark'}dark{else}auto{/if}{/capture}
 <!DOCTYPE html>
-<html lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
+<html data-theme="dark" lang="{$currentLocale|replace:"_":"-"}" xml:lang="{$currentLocale|replace:"_":"-"}">
+<script>
+    (function() {
+        try {
+            const STORAGE_KEY = 'glass-theme-color-mode';
+            const setting = '{$initialTheme}';
+            let theme = localStorage.getItem(STORAGE_KEY);
+            
+            if (!theme || theme === 'auto') {
+                if (setting === 'auto') {
+                    theme = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+                } else {
+                    theme = setting;
+                }
+            }
+            
+            document.documentElement.setAttribute('data-theme', theme);
+            if (theme === 'light') document.documentElement.classList.add('theme-light');
+            else document.documentElement.classList.remove('theme-light');
+        } catch (e) {}
+    })();
+</script>
+<script src="{$baseUrl}/plugins/themes/glassTheme/js/glass-theme.js" defer></script>
 {if !$pageTitleTranslated}{capture assign="pageTitleTranslated"}{translate key=$pageTitle}{/capture}{/if}
 {include file="frontend/components/headerHead.tpl"}
 <body class="pkp_page_{$requestedPage|escape} pkp_op_{$requestedOp|escape}" dir="{if $currentLocale|substr:0:2 == 'ar'}rtl{else}ltr{/if}">
@@ -63,14 +86,7 @@
                         {translate key="common.search"}
                     </a>
                 </li>
-                {if $isUserLoggedIn}
-                    <li class="nav-link-item">
-                        <a class="nav-link"
-                           href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='profile'}">
-                            {translate key="user.profile"}
-                        </a>
-                    </li>
-                {else}
+                {if !$isUserLoggedIn}
                     <li class="nav-link-item">
                         <a class="nav-link"
                            href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login'}">
@@ -114,13 +130,45 @@
                     </div>
                 </div>
                 {/if}
-
-                {* Dark/Light toggle *}
-                <button class="theme-toggle" id="theme-toggle"
-                        aria-label="{translate key='plugins.themes.glassTheme.toggleTheme'}"
-                        title="{translate key='plugins.themes.glassTheme.toggleTheme'}">
-                    🌙
-                </button>
+ 
+                {* User Account Menu *}
+                {if $isUserLoggedIn}
+                <div class="user-menu" id="user-menu-root">
+                    <button class="user-btn" id="user-btn" aria-haspopup="true" aria-expanded="false" aria-controls="user-dropdown">
+                        <div class="user-avatar">
+                            {assign var="userAvatar" value=$currentUser->getData('avatar')}
+                            {if $userAvatar}
+                                <img src="{$publicFilesDir}/{$userAvatar.uploadName|escape:"url"}" alt="{$currentUser->getFullName()|escape}">
+                            {else}
+                                <span>{$currentUser->getLocalizedGivenName()|substr:0:1|upper}{$currentUser->getLocalizedFamilyName()|substr:0:1|upper}</span>
+                            {/if}
+                        </div>
+                        <span class="user-name">{$currentUser->getLocalizedGivenName()|escape}</span>
+                        <svg width="10" height="6" viewBox="0 0 10 6" fill="none" aria-hidden="true" style="margin-left:2px;opacity:0.5;">
+                            <path d="M1 1l4 4 4-4" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </button>
+                    <div class="user-dropdown" id="user-dropdown" role="menu">
+                        <div class="user-dropdown-header">
+                            <span class="name">{$currentUser->getFullName()|escape}</span>
+                            <span class="email">{$currentUser->getEmail()|escape}</span>
+                        </div>
+                        <a class="user-dropdown-item" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='dashboard'}" role="menuitem">
+                            <span>📊</span> {translate key="navigation.dashboard"}
+                        </a>
+                        <a class="user-dropdown-item" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='profile'}" role="menuitem">
+                            <span>👤</span> {translate key="user.profile"}
+                        </a>
+                        <a class="user-dropdown-item" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='submission'}" role="menuitem">
+                            <span>📝</span> {translate key="navigation.submissions"}
+                        </a>
+                        <div style="border-top:1px solid var(--glass-border);margin:0.5rem 0;"></div>
+                        <a class="user-dropdown-item logout" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='logout'}" role="menuitem">
+                            <span>🚪</span> {translate key="user.logOut"}
+                        </a>
+                    </div>
+                </div>
+                {/if}
 
                 {* Submit/Login CTA *}
                 {if $currentJournal->getData('allowPublicRegistration') || $isUserLoggedIn}
@@ -169,7 +217,39 @@
                     </a>
                 </li>
                 {/foreach}
-                {if !$isUserLoggedIn}
+                {if $isUserLoggedIn}
+                <li style="margin-top:1rem;padding-top:1rem;border-top:1px solid var(--glass-border);">
+                    <div style="display:flex;align-items:center;gap:0.75rem;padding:0.5rem 1rem;">
+                        <div class="user-avatar" style="width:2.5rem;height:2.5rem;font-size:1rem;">
+                             {assign var="userAvatar" value=$currentUser->getData('avatar')}
+                             {if $userAvatar}
+                                <img src="{$publicFilesDir}/{$userAvatar.uploadName|escape:"url"}" alt="{$currentUser->getFullName()|escape}">
+                            {else}
+                                <span>{$currentUser->getLocalizedGivenName()|substr:0:1|upper}{$currentUser->getLocalizedFamilyName()|substr:0:1|upper}</span>
+                            {/if}
+                        </div>
+                        <div style="display:flex;flex-direction:column;">
+                            <span style="font-weight:700;font-size:0.95rem;color:var(--glass-text);">{$currentUser->getFullName()|escape}</span>
+                            <span style="font-size:0.75rem;color:var(--glass-text-subtle);">{$currentUser->getEmail()|escape}</span>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a class="nav-link" style="display:block;padding:.75rem 1rem;border-radius:.5rem;" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='dashboard'}">
+                        {translate key="navigation.dashboard"}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" style="display:block;padding:.75rem 1rem;border-radius:.5rem;" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='profile'}">
+                        {translate key="user.profile"}
+                    </a>
+                </li>
+                <li>
+                    <a class="nav-link" style="display:block;padding:.75rem 1rem;border-radius:.5rem;color:#ef4444;" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='logout'}">
+                        {translate key="user.logOut"}
+                    </a>
+                </li>
+                {else}
                 <li>
                     <a class="glass-btn glass-btn-primary" style="margin-top:.75rem;width:100%;justify-content:center;"
                        href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login'}">

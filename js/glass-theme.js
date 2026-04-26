@@ -4,76 +4,66 @@
 
 (() => {
     'use strict';
+    console.log('Glass Theme: JS loaded and running');
 
     const STORAGE_THEME_KEY = 'glass-theme-color-mode';
     const $ = (sel, ctx = document) => ctx.querySelector(sel);
     const $$ = (sel, ctx = document) => [...ctx.querySelectorAll(sel)];
 
-    // ─── 1. Theme Logic (Run ASAP) ───────────────────────────────────────────
+    // ─── 1. Theme Logic ─────────────────────────────────────────────────────
     function initTheme() {
         const root = document.documentElement;
+        const mediaQuery = window.matchMedia('(prefers-color-scheme: dark)');
         
         const applyTheme = (mode) => {
             root.setAttribute('data-theme', mode);
             document.body.setAttribute('data-theme', mode);
             
-            const btn = $('#theme-toggle');
-            if (btn) {
-                btn.innerHTML = mode === 'dark' ? '☀️' : '🌙';
+            if (mode === 'light') {
+                root.classList.add('theme-light');
+                document.body.classList.add('theme-light');
+            } else {
+                root.classList.remove('theme-light');
+                document.body.classList.remove('theme-light');
             }
+            
+            // Update all toggle buttons (if there are multiple, e.g. mobile/desktop)
+            $$('.theme-toggle').forEach(btn => {
+                btn.innerHTML = mode === 'dark' ? '☀️' : '🌙';
+            });
         };
 
-        const getPreferred = () => {
-            const stored = localStorage.getItem(STORAGE_THEME_KEY);
-            if (stored) return stored;
-            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
-        };
+        // Listen for system changes (only if no manual override is stored)
+        mediaQuery.addEventListener('change', () => {
+            if (!localStorage.getItem(STORAGE_THEME_KEY)) {
+                applyTheme(mediaQuery.matches ? 'dark' : 'light');
+            }
+        });
 
-        // Initial apply
-        const currentMode = getPreferred();
-        applyTheme(currentMode);
-
-        // Global click listener for the toggle (more resilient than direct binding)
+        // Delegate toggle clicks
         document.addEventListener('click', e => {
-            const btn = e.target.closest('#theme-toggle');
+            const btn = e.target.closest('.theme-toggle');
             if (!btn) return;
             
+            e.preventDefault();
             const current = root.getAttribute('data-theme') || 'dark';
             const next = current === 'dark' ? 'light' : 'dark';
             
             localStorage.setItem(STORAGE_THEME_KEY, next);
             applyTheme(next);
         });
+
+        // Final sync of icon and state
+        const currentMode = root.getAttribute('data-theme') || (mediaQuery.matches ? 'dark' : 'light');
+        applyTheme(currentMode);
     }
 
     // ─── 2. Transitions ──────────────────────────────────────────────────────
     function initTransitions() {
         const body = document.body;
         body.classList.add('page-fade');
-        setTimeout(() => { body.style.opacity = '1'; }, 100);
-
-        document.addEventListener('click', e => {
-            const link = e.target.closest('a[href]');
-            if (!link || e.defaultPrevented) return;
-
-            const href = link.href;
-            const attrHref = link.getAttribute('href') || '';
-            
-            if (!href || attrHref.startsWith('#') || attrHref.startsWith('javascript') ||
-                link.target === '_blank' || link.hasAttribute('download') ||
-                e.metaKey || e.ctrlKey) return;
-
-            try {
-                const url = new URL(href);
-                if (url.origin !== window.location.origin) return;
-                if (url.pathname.includes('/download/') || url.pathname.includes('/view/')) return;
-            } catch (_) { return; }
-
-            e.preventDefault();
-            body.style.transition = 'opacity 0.2s ease';
-            body.style.opacity = '0';
-            setTimeout(() => { window.location.href = href; }, 200);
-        });
+        // The browser handles the actual navigation. 
+        // Fade-in is handled by the 'page-fade' CSS class.
     }
 
     // ─── 3. Nav & Scroll ─────────────────────────────────────────────────────
@@ -105,6 +95,25 @@
                 localeDrop.classList.toggle('open');
             });
             document.addEventListener('click', () => localeDrop.classList.remove('open'));
+        }
+
+        // User Dropdown
+        const userBtn = $('#user-btn');
+        const userDrop = $('#user-dropdown');
+        console.log('User Menu Check:', { userBtn, userDrop });
+        if (userBtn && userDrop) {
+            console.log('User Menu initialized');
+            userBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                const isOpen = userDrop.classList.toggle('open');
+                userBtn.setAttribute('aria-expanded', isOpen);
+                // Close locale if open
+                if (localeDrop) localeDrop.classList.remove('open');
+            });
+            document.addEventListener('click', () => {
+                userDrop.classList.remove('open');
+                userBtn.setAttribute('aria-expanded', 'false');
+            });
         }
     }
 
