@@ -269,3 +269,16 @@ msgstr "Repeat Password"
 
 msgid "common.selectCountry"
 msgstr "Select Country"
+
+msgid "navigation.archives.continueBrowsing"
+msgstr "Continue Browsing"
+
+msgid "user.register.registrationCompleted"
+msgstr "Registration Completed"
+
+msgid "user.register.registrationCompleted.instructions"
+msgstr "Your account has been created successfully. You can now start using our platform to submit articles or participate in our peer-review process."
+
+msgid "user.profile.editProfile"
+msgstr "Edit My Profile"
+

@@ -1078,3 +1078,25 @@ body {
   --card-bg-inner: rgba(0, 0, 0, 0.03) !important;
   color-scheme: light;
 }
+
+/* ─── Registration Page ─── */
+.registration-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 3rem;
+  align-items: start;
+}
+@media (min-width: 1024px) {
+  .registration-layout {
+    grid-template-columns: 380px 1fr;
+  }
+}
+.registration-info {
+  display: none;
+}
+@media (min-width: 1024px) {
+  .registration-info {
+    display: block;
+  }
+}
+

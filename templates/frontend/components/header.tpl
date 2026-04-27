@@ -163,7 +163,7 @@
                             <span>📝</span> {translate key="navigation.submissions"}
                         </a>
                         <div style="border-top:1px solid var(--glass-border);margin:0.5rem 0;"></div>
-                        <a class="user-dropdown-item logout" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='logout'}" role="menuitem">
+                        <a class="user-dropdown-item logout" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login' op='signOut'}" role="menuitem">
                             <span>🚪</span> {translate key="user.logOut"}
                         </a>
                     </div>
@@ -245,7 +245,7 @@
                     </a>
                 </li>
                 <li>
-                    <a class="nav-link" style="display:block;padding:.75rem 1rem;border-radius:.5rem;color:#ef4444;" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='logout'}">
+                    <a class="nav-link" style="display:block;padding:.75rem 1rem;border-radius:.5rem;color:#ef4444;" href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login' op='signOut'}">
                         {translate key="user.logOut"}
                     </a>
                 </li>

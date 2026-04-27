@@ -85,11 +85,11 @@
                             href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='submission'}">{translate key="author.submit"}</a>
                     </li>
                     <li><a
-                            href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='logout'}">{translate key="user.logOut"}</a>
+                            href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login' op='signOut'}">{translate key="user.logOut"}</a>
                     </li>
                 {else}
                     <li><a
-                            href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='login'}">{translate key="user.login"}</a>
+                            href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='login'}">{translate key="user.login"}</a>
                     </li>
                     <li><a
                             href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='user' op='register'}">{translate key="user.register"}</a>

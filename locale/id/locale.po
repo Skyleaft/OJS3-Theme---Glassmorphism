@@ -269,3 +269,16 @@ msgstr "Ulangi Kata Sandi"
 
 msgid "common.selectCountry"
 msgstr "Pilih Negara"
+
+msgid "navigation.archives.continueBrowsing"
+msgstr "Lanjut Menjelajah"
+
+msgid "user.register.registrationCompleted"
+msgstr "Pendaftaran Berhasil"
+
+msgid "user.register.registrationCompleted.instructions"
+msgstr "Akun Anda telah berhasil dibuat. Anda sekarang dapat mulai menggunakan platform kami untuk mengirim artikel atau berpartisipasi dalam proses peninjauan sejawat."
+
+msgid "user.profile.editProfile"
+msgstr "Lengkapi Profil Saya"
+
