@@ -73,6 +73,22 @@
             </ul>
         </div>
 
+        {* Information column *}
+        <div>
+            <div class="footer-col-title">{translate key="common.information"}</div>
+            <ul class="footer-links">
+                <li><a
+                        href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='information' op='readers'}">{translate key="navigation.infoForReaders"}</a>
+                </li>
+                <li><a
+                        href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='information' op='authors'}">{translate key="navigation.infoForAuthors"}</a>
+                </li>
+                <li><a
+                        href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='information' op='librarians'}">{translate key="navigation.infoForLibrarians"}</a>
+                </li>
+            </ul>
+        </div>
+
         {* Account column *}
         <div>
             <div class="footer-col-title">{translate key="navigation.access"}</div>

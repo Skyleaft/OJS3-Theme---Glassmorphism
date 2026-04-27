@@ -175,6 +175,18 @@ msgstr "About"
 msgid "navigation.site"
 msgstr "Site Navigation"
 
+msgid "common.information"
+msgstr "Information"
+
+msgid "navigation.infoForReaders"
+msgstr "For Readers"
+
+msgid "navigation.infoForAuthors"
+msgstr "For Authors"
+
+msgid "navigation.infoForLibrarians"
+msgstr "For Librarians"
+
 msgid "common.copyright"
 msgstr "Copyright"
 

@@ -175,6 +175,18 @@ msgstr "Tentang"
 msgid "navigation.site"
 msgstr "Navigasi Situs"
 
+msgid "common.information"
+msgstr "Informasi"
+
+msgid "navigation.infoForReaders"
+msgstr "Untuk Pembaca"
+
+msgid "navigation.infoForAuthors"
+msgstr "Untuk Penulis"
+
+msgid "navigation.infoForLibrarians"
+msgstr "Untuk Pustakawan"
+
 msgid "common.copyright"
 msgstr "Hak Cipta"
 
