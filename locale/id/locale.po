@@ -294,3 +294,92 @@ msgstr "Akun Anda telah berhasil dibuat. Anda sekarang dapat mulai menggunakan p
 msgid "user.profile.editProfile"
 msgstr "Lengkapi Profil Saya"
 
+# ── Sidebar Options (admin) ─────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.option.yes"
+msgstr "Ya"
+
+msgid "plugins.themes.glassTheme.option.no"
+msgstr "Tidak"
+
+msgid "plugins.themes.glassTheme.option.sidebar.showInfo"
+msgstr "Tampilkan Blok Informasi Jurnal"
+
+msgid "plugins.themes.glassTheme.option.sidebar.showTemplate"
+msgstr "Tampilkan Template Jurnal / Tautan Kustom"
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateUrl"
+msgstr "URL Unduhan Template"
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateUrl.description"
+msgstr "Masukkan URL lengkap ke berkas template naskah (mis. tautan Google Drive atau server)."
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateLabel"
+msgstr "Label Tombol Template"
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateLabel.description"
+msgstr "Label kustom untuk tombol unduhan. Kosongkan untuk menggunakan teks default."
+
+msgid "plugins.themes.glassTheme.option.sidebar.showVisitors"
+msgstr "Tampilkan Penghitung Pengunjung"
+
+msgid "plugins.themes.glassTheme.option.sidebar.visitorCode"
+msgstr "Script / Kode Penghitung Pengunjung"
+
+msgid "plugins.themes.glassTheme.option.sidebar.visitorCode.description"
+msgstr "Tempel skrip penghitung pengunjung pihak ketiga Anda di sini (misalnya dari Statcounter). Jika dikosongkan, penghitung lokal akan digunakan."
+
+msgid "plugins.themes.glassTheme.option.sidebar.showIndexed"
+msgstr "Tampilkan Blok Terindeks"
+
+msgid "plugins.themes.glassTheme.option.sidebar.indexedBy"
+msgstr "Basis Data Pengindeksan (Ikon)"
+
+msgid "plugins.themes.glassTheme.option.sidebar.indexedBy.description"
+msgstr "Masukkan item yang dipisahkan oleh titik koma (;) menggunakan format: URL Gambar | URL Tautan | Teks Alt (Contoh: /path/logo1.png | https://link1.com | Scopus ; /path/logo2.png | https://link2.com | DOAJ)"
+
+# ── Sidebar Widget Labels ───────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.sidebar.label"
+msgstr "Bilah Sisi Jurnal"
+
+msgid "plugins.themes.glassTheme.sidebar.journalInfo"
+msgstr "Informasi Jurnal"
+
+msgid "plugins.themes.glassTheme.sidebar.publisher"
+msgstr "Penerbit"
+
+msgid "plugins.themes.glassTheme.sidebar.license"
+msgstr "Lisensi"
+
+msgid "plugins.themes.glassTheme.sidebar.viewLicense"
+msgstr "Lihat Lisensi"
+
+msgid "plugins.themes.glassTheme.sidebar.journalTemplate"
+msgstr "Template Jurnal"
+
+msgid "plugins.themes.glassTheme.sidebar.journalTemplate.desc"
+msgstr "Unduh template naskah resmi untuk mempersiapkan kiriman Anda."
+
+msgid "plugins.themes.glassTheme.sidebar.downloadTemplate"
+msgstr "Unduh Template"
+
+msgid "plugins.themes.glassTheme.sidebar.templateNotSet"
+msgstr "Tautan template belum dikonfigurasi."
+
+msgid "plugins.themes.glassTheme.sidebar.visitors"
+msgstr "Statistik Pengunjung"
+
+msgid "plugins.themes.glassTheme.sidebar.visitors.today"
+msgstr "Hari Ini"
+
+msgid "plugins.themes.glassTheme.sidebar.visitors.total"
+msgstr "Semua Waktu"
+
+msgid "plugins.themes.glassTheme.sidebar.visitors.note"
+msgstr "Hitungan disimpan secara lokal di browser Anda dan akan direset saat cache dihapus."
+
+msgid "plugins.themes.glassTheme.sidebar.indexedBy"
+msgstr "Terindeks Oleh"
+
+msgid "plugins.themes.glassTheme.sidebar.indexedBy.notSet"
+msgstr "Belum ada basis data pengindeks yang dikonfigurasi."
+

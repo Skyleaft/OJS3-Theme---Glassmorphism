@@ -28,6 +28,16 @@ class GlassThemePlugin extends ThemePlugin
     const OPTION_BLUR_INTENSITY = 'blurIntensity';
     const OPTION_DEFAULT_MODE   = 'defaultColorMode';
 
+    // ─── Sidebar Options ──────────────────────────────────────────────────
+    const OPTION_SIDEBAR_SHOW_INFO      = 'sidebarShowInfo';
+    const OPTION_SIDEBAR_SHOW_TEMPLATE  = 'sidebarShowTemplate';
+    const OPTION_SIDEBAR_TEMPLATE_URL   = 'sidebarTemplateUrl';
+    const OPTION_SIDEBAR_TEMPLATE_LABEL = 'sidebarTemplateLabel';
+    const OPTION_SIDEBAR_SHOW_VISITORS  = 'sidebarShowVisitors';
+    const OPTION_SIDEBAR_VISITOR_CODE   = 'sidebarVisitorCode';
+    const OPTION_SIDEBAR_SHOW_INDEXED   = 'sidebarShowIndexed';
+    const OPTION_SIDEBAR_INDEXED_BY     = 'sidebarIndexedBy';
+
     // ─── Lifecycle ────────────────────────────────────────────────────────
 
     /**
@@ -69,6 +79,62 @@ class GlassThemePlugin extends ThemePlugin
             ],
         ]);
 
+        // ── Sidebar: Journal Info Block ────────────────────────────────────
+        $this->addOption(self::OPTION_SIDEBAR_SHOW_INFO, 'radio', [
+            'label'   => 'plugins.themes.glassTheme.option.sidebar.showInfo',
+            'options' => [
+                'yes' => 'plugins.themes.glassTheme.option.yes',
+                'no'  => 'plugins.themes.glassTheme.option.no',
+            ],
+        ]);
+
+        // ── Sidebar: Journal Template / Custom Link ─────────────────────────
+        $this->addOption(self::OPTION_SIDEBAR_SHOW_TEMPLATE, 'radio', [
+            'label'   => 'plugins.themes.glassTheme.option.sidebar.showTemplate',
+            'options' => [
+                'yes' => 'plugins.themes.glassTheme.option.yes',
+                'no'  => 'plugins.themes.glassTheme.option.no',
+            ],
+        ]);
+
+        $this->addOption(self::OPTION_SIDEBAR_TEMPLATE_URL, 'text', [
+            'label'       => 'plugins.themes.glassTheme.option.sidebar.templateUrl',
+            'description' => 'plugins.themes.glassTheme.option.sidebar.templateUrl.description',
+        ]);
+
+        $this->addOption(self::OPTION_SIDEBAR_TEMPLATE_LABEL, 'text', [
+            'label'       => 'plugins.themes.glassTheme.option.sidebar.templateLabel',
+            'description' => 'plugins.themes.glassTheme.option.sidebar.templateLabel.description',
+        ]);
+
+        // ── Sidebar: Visitor Counter ───────────────────────────────────────
+        $this->addOption(self::OPTION_SIDEBAR_SHOW_VISITORS, 'radio', [
+            'label'   => 'plugins.themes.glassTheme.option.sidebar.showVisitors',
+            'options' => [
+                'yes' => 'plugins.themes.glassTheme.option.yes',
+                'no'  => 'plugins.themes.glassTheme.option.no',
+            ],
+        ]);
+
+        $this->addOption(self::OPTION_SIDEBAR_VISITOR_CODE, 'text', [
+            'label'       => 'plugins.themes.glassTheme.option.sidebar.visitorCode',
+            'description' => 'plugins.themes.glassTheme.option.sidebar.visitorCode.description',
+        ]);
+
+        // ── Sidebar: Indexed By ────────────────────────────────────────────
+        $this->addOption(self::OPTION_SIDEBAR_SHOW_INDEXED, 'radio', [
+            'label'   => 'plugins.themes.glassTheme.option.sidebar.showIndexed',
+            'options' => [
+                'yes' => 'plugins.themes.glassTheme.option.yes',
+                'no'  => 'plugins.themes.glassTheme.option.no',
+            ],
+        ]);
+
+        $this->addOption(self::OPTION_SIDEBAR_INDEXED_BY, 'text', [
+            'label'       => 'plugins.themes.glassTheme.option.sidebar.indexedBy',
+            'description' => 'plugins.themes.glassTheme.option.sidebar.indexedBy.description',
+        ]);
+
         // ── Styles ────────────────────────────────────────────────────────
         // Google Fonts — Inter (variable weight 300-800)
         $this->addStyle(
@@ -94,6 +160,31 @@ class GlassThemePlugin extends ThemePlugin
     {
         $templateMgr = $args[0];
         $templateMgr->assign('colorMode', $this->getOption(self::OPTION_DEFAULT_MODE) ?? 'dark');
+
+        // ── Sidebar data ─────────────────────────────────────────────────
+        $templateMgr->assign('sidebarShowInfo',     ($this->getOption(self::OPTION_SIDEBAR_SHOW_INFO)     ?? 'yes') === 'yes');
+        $templateMgr->assign('sidebarShowTemplate', ($this->getOption(self::OPTION_SIDEBAR_SHOW_TEMPLATE) ?? 'yes') === 'yes');
+        $templateMgr->assign('sidebarTemplateUrl',   $this->getOption(self::OPTION_SIDEBAR_TEMPLATE_URL)  ?? '');
+        $templateMgr->assign('sidebarTemplateLabel', $this->getOption(self::OPTION_SIDEBAR_TEMPLATE_LABEL) ?? '');
+        $templateMgr->assign('sidebarShowVisitors',  ($this->getOption(self::OPTION_SIDEBAR_SHOW_VISITORS) ?? 'yes') === 'yes');
+        $templateMgr->assign('sidebarVisitorCode',   $this->getOption(self::OPTION_SIDEBAR_VISITOR_CODE)   ?? '');
+        $templateMgr->assign('sidebarShowIndexed',   ($this->getOption(self::OPTION_SIDEBAR_SHOW_INDEXED)  ?? 'yes') === 'yes');
+
+        // Parse multiline or semicolon-separated indexed-by list into an array of objects
+        // Format: ImageURL | LinkURL | AltName (separate items with newline or semicolon)
+        $rawIndexed = $this->getOption(self::OPTION_SIDEBAR_INDEXED_BY) ?? '';
+        $indexedLines = array_filter(array_map('trim', preg_split('/[\n;]+/', $rawIndexed)));
+        $indexedList = [];
+        foreach ($indexedLines as $line) {
+            $parts = array_map('trim', explode('|', $line));
+            $indexedList[] = [
+                'image' => $parts[0] ?? '',
+                'link'  => $parts[1] ?? '',
+                'name'  => $parts[2] ?? ($parts[0] ? basename($parts[0]) : ''),
+            ];
+        }
+        $templateMgr->assign('sidebarIndexedList', $indexedList);
+
         return false;
     }
 

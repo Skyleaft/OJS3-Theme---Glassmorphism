@@ -294,3 +294,92 @@ msgstr "Your account has been created successfully. You can now start using our 
 msgid "user.profile.editProfile"
 msgstr "Edit My Profile"
 
+# ── Sidebar Options (admin) ─────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.option.yes"
+msgstr "Yes"
+
+msgid "plugins.themes.glassTheme.option.no"
+msgstr "No"
+
+msgid "plugins.themes.glassTheme.option.sidebar.showInfo"
+msgstr "Show Journal Information Block"
+
+msgid "plugins.themes.glassTheme.option.sidebar.showTemplate"
+msgstr "Show Journal Template / Custom Link"
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateUrl"
+msgstr "Template Download URL"
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateUrl.description"
+msgstr "Enter the full URL to the manuscript template file (e.g. a Google Drive or server link)."
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateLabel"
+msgstr "Template Button Label"
+
+msgid "plugins.themes.glassTheme.option.sidebar.templateLabel.description"
+msgstr "Custom label for the download button. Leave blank to use the default text."
+
+msgid "plugins.themes.glassTheme.option.sidebar.showVisitors"
+msgstr "Show Visitor Counter"
+
+msgid "plugins.themes.glassTheme.option.sidebar.visitorCode"
+msgstr "Visitor Counter Script / Code"
+
+msgid "plugins.themes.glassTheme.option.sidebar.visitorCode.description"
+msgstr "Paste your third-party visitor counter script here (e.g. from Statcounter). If left blank, a local counter will be used."
+
+msgid "plugins.themes.glassTheme.option.sidebar.showIndexed"
+msgstr "Show Indexed By Block"
+
+msgid "plugins.themes.glassTheme.option.sidebar.indexedBy"
+msgstr "Indexing Databases (Icons)"
+
+msgid "plugins.themes.glassTheme.option.sidebar.indexedBy.description"
+msgstr "Enter items separated by semicolons (;) using the format: Image URL | Link URL | Alt Text (Example: /path/logo1.png | https://link1.com | Scopus ; /path/logo2.png | https://link2.com | DOAJ)"
+
+# ── Sidebar Widget Labels ───────────────────────────────────────────────────
+msgid "plugins.themes.glassTheme.sidebar.label"
+msgstr "Journal Sidebar"
+
+msgid "plugins.themes.glassTheme.sidebar.journalInfo"
+msgstr "Journal Information"
+
+msgid "plugins.themes.glassTheme.sidebar.publisher"
+msgstr "Publisher"
+
+msgid "plugins.themes.glassTheme.sidebar.license"
+msgstr "License"
+
+msgid "plugins.themes.glassTheme.sidebar.viewLicense"
+msgstr "View License"
+
+msgid "plugins.themes.glassTheme.sidebar.journalTemplate"
+msgstr "Journal Template"
+
+msgid "plugins.themes.glassTheme.sidebar.journalTemplate.desc"
+msgstr "Download the official manuscript template to prepare your submission."
+
+msgid "plugins.themes.glassTheme.sidebar.downloadTemplate"
+msgstr "Download Template"
+
+msgid "plugins.themes.glassTheme.sidebar.templateNotSet"
+msgstr "Template link not configured yet."
+
+msgid "plugins.themes.glassTheme.sidebar.visitors"
+msgstr "Visitor Statistics"
+
+msgid "plugins.themes.glassTheme.sidebar.visitors.today"
+msgstr "Today"
+
+msgid "plugins.themes.glassTheme.sidebar.visitors.total"
+msgstr "All Time"
+
+msgid "plugins.themes.glassTheme.sidebar.visitors.note"
+msgstr "Counts are stored locally in your browser and reset when cache is cleared."
+
+msgid "plugins.themes.glassTheme.sidebar.indexedBy"
+msgstr "Indexed By"
+
+msgid "plugins.themes.glassTheme.sidebar.indexedBy.notSet"
+msgstr "No indexing databases configured yet."
+
