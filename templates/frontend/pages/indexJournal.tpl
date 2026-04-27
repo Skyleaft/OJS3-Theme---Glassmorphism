@@ -308,13 +308,15 @@
                             {if $sidebarIndexedList && $sidebarIndexedList|@count}
                                 <div class="indexed-icons-grid">
                                     {foreach from=$sidebarIndexedList item=index}
-                                        {if $index.link}<a href="{$index.link|escape}" target="_blank" rel="noopener" class="indexed-icon-link">{/if}
+                                        {if $index.link}<a href="{$index.link|escape}" target="_blank" rel="noopener"
+                                            class="indexed-icon-link">{/if}
                                             {if $index.image}
-                                                <img src="{$index.image|escape}" alt="{$index.name|escape}" title="{$index.name|escape}" class="indexed-logo" />
+                                                <img src="{$index.image|escape}" alt="{$index.name|escape}" title="{$index.name|escape}"
+                                                    class="indexed-logo" />
                                             {else}
                                                 <span class="indexed-fallback">{$index.name|escape}</span>
                                             {/if}
-                                        {if $index.link}</a>{/if}
+                                            {if $index.link}</a>{/if}
                                     {/foreach}
                                 </div>
                             {else}

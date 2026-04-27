@@ -187,6 +187,15 @@ msgstr "Untuk Penulis"
 msgid "navigation.infoForLibrarians"
 msgstr "Untuk Pustakawan"
 
+msgid "navigation.infoForReaders.long"
+msgstr "Informasi Untuk Pembaca"
+
+msgid "navigation.infoForAuthors.long"
+msgstr "Informasi Untuk Penulis"
+
+msgid "navigation.infoForLibrarians.long"
+msgstr "Informasi Untuk Pustakawan"
+
 msgid "common.copyright"
 msgstr "Hak Cipta"
 

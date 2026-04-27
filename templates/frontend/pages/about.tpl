@@ -27,8 +27,8 @@
             <div class="glass-card" style="padding: 2.5rem; max-width: 900px; margin: 0 auto;">
 
                 <div class="article-content" style="color: var(--glass-text-muted); line-height: 1.8;">
-                    {if $currentJournal->getLocalizedDescription()}
-                        {$currentJournal->getLocalizedDescription()}
+                    {if $currentJournal->getLocalizedData('about')}
+                        {$currentJournal->getLocalizedData('about')}
                     {else}
                         <p style="text-align: center; padding: 2rem 0;">
                             {translate key="about.aboutTheJournal.noDescription"}
