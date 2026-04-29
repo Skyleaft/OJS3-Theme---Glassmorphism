@@ -96,6 +96,9 @@ msgstr "Current Issue"
 msgid "plugins.themes.glassTheme.latestIssue"
 msgstr "Latest Issue"
 
+msgid "plugins.themes.glassTheme.issue"
+msgstr "Issue"
+
 msgid "plugins.themes.glassTheme.latestNews"
 msgstr "Latest News & Announcements"
 
@@ -299,6 +302,33 @@ msgstr "Registration Completed"
 
 msgid "user.register.registrationCompleted.instructions"
 msgstr "Your account has been created successfully. You can now start using our platform to submit articles or participate in our peer-review process."
+
+msgid "user.register.registrationPending"
+msgstr "Registration Pending"
+
+msgid "user.register.registrationPending.instructions"
+msgstr "Your registration is almost complete. A confirmation email has been sent to your address. Please follow the instructions in the email to verify your account."
+
+msgid "user.login.registrationPendingValidation"
+msgstr "Your account is pending email validation. Please check your inbox for the confirmation link."
+
+msgid "user.register.registrationConfirmed"
+msgstr "Registration Confirmed"
+
+msgid "user.register.registrationConfirmed.instructions"
+msgstr "Your account has been successfully verified. You can now log in using your credentials."
+
+msgid "user.login.activated"
+msgstr "Account Activated"
+
+msgid "user.login.activated.instructions"
+msgstr "Your account has been successfully activated. You can now log in using your credentials."
+
+msgid "user.register.confirmAndActivate"
+msgstr "Confirm and activate your account"
+
+msgid "user.register.activateAccount"
+msgstr "Activate Account"
 
 msgid "user.profile.editProfile"
 msgstr "Edit My Profile"

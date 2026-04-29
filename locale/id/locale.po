@@ -96,6 +96,9 @@ msgstr "Edisi Terkini"
 msgid "plugins.themes.glassTheme.latestIssue"
 msgstr "Edisi Terbaru"
 
+msgid "plugins.themes.glassTheme.issue"
+msgstr "Edisi"
+
 msgid "plugins.themes.glassTheme.latestNews"
 msgstr "Berita & Pengumuman Terbaru"
 
@@ -299,6 +302,33 @@ msgstr "Pendaftaran Berhasil"
 
 msgid "user.register.registrationCompleted.instructions"
 msgstr "Akun Anda telah berhasil dibuat. Anda sekarang dapat mulai menggunakan platform kami untuk mengirim artikel atau berpartisipasi dalam proses peninjauan sejawat."
+
+msgid "user.register.registrationPending"
+msgstr "Pendaftaran Tertunda"
+
+msgid "user.register.registrationPending.instructions"
+msgstr "Pendaftaran Anda hampir selesai. Email konfirmasi telah dikirim ke alamat email Anda. Silakan ikuti instruksi dalam email tersebut untuk memverifikasi akun Anda."
+
+msgid "user.login.registrationPendingValidation"
+msgstr "Akun Anda sedang menunggu validasi email. Silakan periksa kotak masuk Anda untuk tautan konfirmasi."
+
+msgid "user.register.registrationConfirmed"
+msgstr "Pendaftaran Dikonfirmasi"
+
+msgid "user.register.registrationConfirmed.instructions"
+msgstr "Akun Anda telah berhasil diverifikasi. Anda sekarang dapat masuk menggunakan kredensial Anda."
+
+msgid "user.login.activated"
+msgstr "Akun Diaktifkan"
+
+msgid "user.login.activated.instructions"
+msgstr "Akun Anda telah berhasil diaktifkan. Anda sekarang dapat masuk menggunakan kredensial Anda."
+
+msgid "user.register.confirmAndActivate"
+msgstr "Konfirmasi dan aktifkan akun Anda"
+
+msgid "user.register.activateAccount"
+msgstr "Aktifkan Akun"
 
 msgid "user.profile.editProfile"
 msgstr "Lengkapi Profil Saya"

@@ -24,19 +24,19 @@ use PKP\plugins\ThemePlugin;
 class GlassThemePlugin extends ThemePlugin
 {
     // ─── Option Defaults ──────────────────────────────────────────────────
-    const OPTION_COLOR_ACCENT   = 'accentColor';
+    const OPTION_COLOR_ACCENT = 'accentColor';
     const OPTION_BLUR_INTENSITY = 'blurIntensity';
-    const OPTION_DEFAULT_MODE   = 'defaultColorMode';
+    const OPTION_DEFAULT_MODE = 'defaultColorMode';
 
     // ─── Sidebar Options ──────────────────────────────────────────────────
-    const OPTION_SIDEBAR_SHOW_INFO      = 'sidebarShowInfo';
-    const OPTION_SIDEBAR_SHOW_TEMPLATE  = 'sidebarShowTemplate';
-    const OPTION_SIDEBAR_TEMPLATE_URL   = 'sidebarTemplateUrl';
+    const OPTION_SIDEBAR_SHOW_INFO = 'sidebarShowInfo';
+    const OPTION_SIDEBAR_SHOW_TEMPLATE = 'sidebarShowTemplate';
+    const OPTION_SIDEBAR_TEMPLATE_URL = 'sidebarTemplateUrl';
     const OPTION_SIDEBAR_TEMPLATE_LABEL = 'sidebarTemplateLabel';
-    const OPTION_SIDEBAR_SHOW_VISITORS  = 'sidebarShowVisitors';
-    const OPTION_SIDEBAR_VISITOR_CODE   = 'sidebarVisitorCode';
-    const OPTION_SIDEBAR_SHOW_INDEXED   = 'sidebarShowIndexed';
-    const OPTION_SIDEBAR_INDEXED_BY     = 'sidebarIndexedBy';
+    const OPTION_SIDEBAR_SHOW_VISITORS = 'sidebarShowVisitors';
+    const OPTION_SIDEBAR_VISITOR_CODE = 'sidebarVisitorCode';
+    const OPTION_SIDEBAR_SHOW_INDEXED = 'sidebarShowIndexed';
+    const OPTION_SIDEBAR_INDEXED_BY = 'sidebarIndexedBy';
 
     // ─── Lifecycle ────────────────────────────────────────────────────────
 
@@ -52,86 +52,86 @@ class GlassThemePlugin extends ThemePlugin
 
         // ── Theme Options (visible in Website → Appearance) ───────────────
         $this->addOption(self::OPTION_COLOR_ACCENT, 'radio', [
-            'label'   => 'plugins.themes.glassTheme.option.accentColor',
+            'label' => 'plugins.themes.glassTheme.option.accentColor',
             'options' => [
-                'indigo'   => 'plugins.themes.glassTheme.option.accentColor.indigo',
-                'violet'   => 'plugins.themes.glassTheme.option.accentColor.violet',
-                'emerald'  => 'plugins.themes.glassTheme.option.accentColor.emerald',
-                'rose'     => 'plugins.themes.glassTheme.option.accentColor.rose',
+                'indigo' => 'plugins.themes.glassTheme.option.accentColor.indigo',
+                'violet' => 'plugins.themes.glassTheme.option.accentColor.violet',
+                'emerald' => 'plugins.themes.glassTheme.option.accentColor.emerald',
+                'rose' => 'plugins.themes.glassTheme.option.accentColor.rose',
             ],
         ]);
 
         $this->addOption(self::OPTION_BLUR_INTENSITY, 'radio', [
-            'label'   => 'plugins.themes.glassTheme.option.blurIntensity',
+            'label' => 'plugins.themes.glassTheme.option.blurIntensity',
             'options' => [
-                'light'  => 'plugins.themes.glassTheme.option.blurIntensity.light',
+                'light' => 'plugins.themes.glassTheme.option.blurIntensity.light',
                 'medium' => 'plugins.themes.glassTheme.option.blurIntensity.medium',
-                'heavy'  => 'plugins.themes.glassTheme.option.blurIntensity.heavy',
+                'heavy' => 'plugins.themes.glassTheme.option.blurIntensity.heavy',
             ],
         ]);
 
         $this->addOption(self::OPTION_DEFAULT_MODE, 'radio', [
-            'label'   => 'plugins.themes.glassTheme.option.defaultColorMode',
+            'label' => 'plugins.themes.glassTheme.option.defaultColorMode',
             'options' => [
-                'dark'  => 'plugins.themes.glassTheme.option.defaultColorMode.dark',
+                'dark' => 'plugins.themes.glassTheme.option.defaultColorMode.dark',
                 'light' => 'plugins.themes.glassTheme.option.defaultColorMode.light',
-                'auto'  => 'plugins.themes.glassTheme.option.defaultColorMode.auto',
+                'auto' => 'plugins.themes.glassTheme.option.defaultColorMode.auto',
             ],
         ]);
 
         // ── Sidebar: Journal Info Block ────────────────────────────────────
         $this->addOption(self::OPTION_SIDEBAR_SHOW_INFO, 'radio', [
-            'label'   => 'plugins.themes.glassTheme.option.sidebar.showInfo',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.showInfo',
             'options' => [
                 'yes' => 'plugins.themes.glassTheme.option.yes',
-                'no'  => 'plugins.themes.glassTheme.option.no',
+                'no' => 'plugins.themes.glassTheme.option.no',
             ],
         ]);
 
         // ── Sidebar: Journal Template / Custom Link ─────────────────────────
         $this->addOption(self::OPTION_SIDEBAR_SHOW_TEMPLATE, 'radio', [
-            'label'   => 'plugins.themes.glassTheme.option.sidebar.showTemplate',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.showTemplate',
             'options' => [
                 'yes' => 'plugins.themes.glassTheme.option.yes',
-                'no'  => 'plugins.themes.glassTheme.option.no',
+                'no' => 'plugins.themes.glassTheme.option.no',
             ],
         ]);
 
         $this->addOption(self::OPTION_SIDEBAR_TEMPLATE_URL, 'text', [
-            'label'       => 'plugins.themes.glassTheme.option.sidebar.templateUrl',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.templateUrl',
             'description' => 'plugins.themes.glassTheme.option.sidebar.templateUrl.description',
         ]);
 
         $this->addOption(self::OPTION_SIDEBAR_TEMPLATE_LABEL, 'text', [
-            'label'       => 'plugins.themes.glassTheme.option.sidebar.templateLabel',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.templateLabel',
             'description' => 'plugins.themes.glassTheme.option.sidebar.templateLabel.description',
         ]);
 
         // ── Sidebar: Visitor Counter ───────────────────────────────────────
         $this->addOption(self::OPTION_SIDEBAR_SHOW_VISITORS, 'radio', [
-            'label'   => 'plugins.themes.glassTheme.option.sidebar.showVisitors',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.showVisitors',
             'options' => [
                 'yes' => 'plugins.themes.glassTheme.option.yes',
-                'no'  => 'plugins.themes.glassTheme.option.no',
+                'no' => 'plugins.themes.glassTheme.option.no',
             ],
         ]);
 
         $this->addOption(self::OPTION_SIDEBAR_VISITOR_CODE, 'text', [
-            'label'       => 'plugins.themes.glassTheme.option.sidebar.visitorCode',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.visitorCode',
             'description' => 'plugins.themes.glassTheme.option.sidebar.visitorCode.description',
         ]);
 
         // ── Sidebar: Indexed By ────────────────────────────────────────────
         $this->addOption(self::OPTION_SIDEBAR_SHOW_INDEXED, 'radio', [
-            'label'   => 'plugins.themes.glassTheme.option.sidebar.showIndexed',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.showIndexed',
             'options' => [
                 'yes' => 'plugins.themes.glassTheme.option.yes',
-                'no'  => 'plugins.themes.glassTheme.option.no',
+                'no' => 'plugins.themes.glassTheme.option.no',
             ],
         ]);
 
         $this->addOption(self::OPTION_SIDEBAR_INDEXED_BY, 'text', [
-            'label'       => 'plugins.themes.glassTheme.option.sidebar.indexedBy',
+            'label' => 'plugins.themes.glassTheme.option.sidebar.indexedBy',
             'description' => 'plugins.themes.glassTheme.option.sidebar.indexedBy.description',
         ]);
 
@@ -162,13 +162,13 @@ class GlassThemePlugin extends ThemePlugin
         $templateMgr->assign('colorMode', $this->getOption(self::OPTION_DEFAULT_MODE) ?? 'dark');
 
         // ── Sidebar data ─────────────────────────────────────────────────
-        $templateMgr->assign('sidebarShowInfo',     ($this->getOption(self::OPTION_SIDEBAR_SHOW_INFO)     ?? 'yes') === 'yes');
+        $templateMgr->assign('sidebarShowInfo', ($this->getOption(self::OPTION_SIDEBAR_SHOW_INFO) ?? 'yes') === 'yes');
         $templateMgr->assign('sidebarShowTemplate', ($this->getOption(self::OPTION_SIDEBAR_SHOW_TEMPLATE) ?? 'yes') === 'yes');
-        $templateMgr->assign('sidebarTemplateUrl',   $this->getOption(self::OPTION_SIDEBAR_TEMPLATE_URL)  ?? '');
+        $templateMgr->assign('sidebarTemplateUrl', $this->getOption(self::OPTION_SIDEBAR_TEMPLATE_URL) ?? '');
         $templateMgr->assign('sidebarTemplateLabel', $this->getOption(self::OPTION_SIDEBAR_TEMPLATE_LABEL) ?? '');
-        $templateMgr->assign('sidebarShowVisitors',  ($this->getOption(self::OPTION_SIDEBAR_SHOW_VISITORS) ?? 'yes') === 'yes');
-        $templateMgr->assign('sidebarVisitorCode',   $this->getOption(self::OPTION_SIDEBAR_VISITOR_CODE)   ?? '');
-        $templateMgr->assign('sidebarShowIndexed',   ($this->getOption(self::OPTION_SIDEBAR_SHOW_INDEXED)  ?? 'yes') === 'yes');
+        $templateMgr->assign('sidebarShowVisitors', ($this->getOption(self::OPTION_SIDEBAR_SHOW_VISITORS) ?? 'yes') === 'yes');
+        $templateMgr->assign('sidebarVisitorCode', $this->getOption(self::OPTION_SIDEBAR_VISITOR_CODE) ?? '');
+        $templateMgr->assign('sidebarShowIndexed', ($this->getOption(self::OPTION_SIDEBAR_SHOW_INDEXED) ?? 'yes') === 'yes');
 
         // Parse multiline or semicolon-separated indexed-by list into an array of objects
         // Format: ImageURL | LinkURL | AltName (separate items with newline or semicolon)
@@ -179,8 +179,8 @@ class GlassThemePlugin extends ThemePlugin
             $parts = array_map('trim', explode('|', $line));
             $indexedList[] = [
                 'image' => $parts[0] ?? '',
-                'link'  => $parts[1] ?? '',
-                'name'  => $parts[2] ?? ($parts[0] ? basename($parts[0]) : ''),
+                'link' => $parts[1] ?? '',
+                'name' => $parts[2] ?? ($parts[0] ? basename($parts[0]) : ''),
             ];
         }
         $templateMgr->assign('sidebarIndexedList', $indexedList);
@@ -195,21 +195,21 @@ class GlassThemePlugin extends ThemePlugin
      */
     protected function buildDynamicVars(): string
     {
-        $accent    = $this->getOption(self::OPTION_COLOR_ACCENT)   ?? 'indigo';
-        $blur      = $this->getOption(self::OPTION_BLUR_INTENSITY) ?? 'medium';
-        $colorMode = $this->getOption(self::OPTION_DEFAULT_MODE)   ?? 'dark';
+        $accent = $this->getOption(self::OPTION_COLOR_ACCENT) ?? 'indigo';
+        $blur = $this->getOption(self::OPTION_BLUR_INTENSITY) ?? 'medium';
+        $colorMode = $this->getOption(self::OPTION_DEFAULT_MODE) ?? 'dark';
 
         $accentMap = [
-            'indigo'  => ['#6366f1', '#4f46e5', '#a5b4fc'],
-            'violet'  => ['#8b5cf6', '#7c3aed', '#c4b5fd'],
+            'indigo' => ['#6366f1', '#4f46e5', '#a5b4fc'],
+            'violet' => ['#8b5cf6', '#7c3aed', '#c4b5fd'],
             'emerald' => ['#10b981', '#059669', '#6ee7b7'],
-            'rose'    => ['#f43f5e', '#e11d48', '#fda4af'],
+            'rose' => ['#f43f5e', '#e11d48', '#fda4af'],
         ];
 
         $blurMap = [
-            'light'  => '8px',
+            'light' => '8px',
             'medium' => '16px',
-            'heavy'  => '28px',
+            'heavy' => '28px',
         ];
 
         [$base, $dark, $light] = $accentMap[$accent] ?? $accentMap['indigo'];

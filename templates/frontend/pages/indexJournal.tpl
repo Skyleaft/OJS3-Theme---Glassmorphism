@@ -77,16 +77,16 @@
                         </div>
                     </div>
 
-                    {if $currentIssue}
+                    {if $issue}
                         <div style="margin-top: 1.5rem; padding-top: 1.25rem; border-top: 1px solid var(--glass-border);">
                             <div
                                 style="font-size: .7rem; font-weight: 700; color: var(--color-accent-light); text-transform: uppercase; margin-bottom: .75rem;">
                                 {translate key="plugins.themes.glassTheme.latestIssue"}
                             </div>
                             <h3 style="font-size: .95rem; font-weight: 600; color: var(--glass-text); line-height: 1.4;">
-                                {$currentIssue->getIssueIdentification()|escape}
+                                {$issue->getIssueIdentification()|escape}
                             </h3>
-                            <a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='issue' op='view' path=$currentIssue->getBestIssueId()}"
+                            <a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='issue' op='view' path=$issue->getBestIssueId()}"
                                 class="glass-btn glass-btn-primary"
                                 style="margin-top: 1.25rem; width: 100%; justify-content: center;">
                                 {translate key="plugins.themes.glassTheme.viewIssue"}
@@ -105,6 +105,81 @@
 
                 {* ── Left / Main Column ────────────────────────────────────── *}
                 <div class="index-main">
+
+                    {* Current Issue Featured Section *}
+                    {if $issue}
+                        <div class="current-issue-block" style="margin-bottom: 4rem;">
+                            <div class="section-header" style="text-align: left; margin-bottom: 2rem;">
+                                <span class="section-eyebrow">{translate key="plugins.themes.glassTheme.issue"}</span>
+                                <h2 class="section-title">{translate key="plugins.themes.glassTheme.latestIssue"}</h2>
+                            </div>
+
+                            <div class="glass-card current-issue-featured"
+                                style="display: flex; overflow: hidden; border-radius: var(--radius-glass); position: relative;">
+
+                                {* Issue Cover *}
+                                {if $issue->getLocalizedCoverImageUrl()}
+                                    <div class="featured-cover-wrapper"
+                                        style="flex: 0 0 280px; position: relative; overflow: hidden; border-right: 1px solid var(--glass-border);">
+                                        <img src="{$issue->getLocalizedCoverImageUrl()|escape}"
+                                            alt="{$issue->getIssueIdentification()|escape}"
+                                            style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.6s ease;">
+                                    </div>
+                                {else}
+                                    <div
+                                        style="flex: 0 0 280px; background: rgba(255,255,255,0.03); display: flex; align-items: center; justify-content: center; border-right: 1px solid var(--glass-border);">
+                                        <svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                            stroke-width="1" opacity="0.2">
+                                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                                        </svg>
+                                    </div>
+                                {/if}
+
+                                {* Issue Details *}
+                                <div
+                                    style="padding: 2.5rem; flex: 1; display: flex; flex-direction: column; justify-content: center; background: linear-gradient(to right, rgba(255,255,255,0.02), transparent);">
+                                    <span class="issue-vol"
+                                        style="font-size: 0.75rem; font-weight: 700; color: var(--color-accent-light); text-transform: uppercase; letter-spacing: 0.1em;">
+                                        {if $issue->getVolume()}Vol. {$issue->getVolume()|escape}{/if}
+                                        {if $issue->getNumber()} No. {$issue->getNumber()|escape}{/if}
+                                        ({$issue->getYear()|escape})
+                                    </span>
+
+                                    <h3
+                                        style="font-size: 1.75rem; margin: 0.75rem 0 1.25rem; font-weight: 800; line-height: 1.2; color: var(--glass-text);">
+                                        {if $issue->getLocalizedTitle()}
+                                            {$issue->getLocalizedTitle()|escape}
+                                        {else}
+                                            {$issue->getIssueIdentification()|escape}
+                                        {/if}
+                                    </h3>
+
+                                    {if $issue->getLocalizedDescription()}
+                                        <div
+                                            style="font-size: 0.95rem; color: var(--glass-text-muted); line-height: 1.7; margin-bottom: 2rem; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden; max-width: 600px;">
+                                            {$issue->getLocalizedDescription()|strip_tags}
+                                        </div>
+                                    {/if}
+
+                                    <div style="display: flex; align-items: center; gap: 1.5rem;">
+                                        <a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='issue' op='view' path=$issue->getBestIssueId()}"
+                                            class="glass-btn glass-btn-primary"
+                                            style="padding: 1rem 2.5rem; font-size: 1rem;">
+                                            {translate key="plugins.themes.glassTheme.viewIssue"}
+                                        </a>
+                                        {if $issue->getDatePublished()}
+                                            <span style="font-size: 0.85rem; color: var(--glass-text-subtle);">
+                                                {translate key="submissions.published"}:
+                                                {$issue->getDatePublished()|date_format:$dateFormatShort}
+                                            </span>
+                                        {/if}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    {/if}
+
 
                     {* Announcements *}
                     {if $announcements && $announcements|@count}
@@ -136,22 +211,6 @@
                         </div>
                     {/if}
 
-                    {* Browse Content / Archives *}
-                    <div class="archives-block">
-                        <div class="section-header" style="text-align: left; margin-bottom: 1.5rem;">
-                            <span class="section-eyebrow">{translate key="navigation.archives"}</span>
-                            <h2 class="section-title">{translate key="plugins.themes.glassTheme.browseContent"}</h2>
-                            <p class="section-subtitle" style="margin-left: 0;">
-                                {translate key="plugins.themes.glassTheme.archiveSubtitle"}</p>
-                        </div>
-
-                        <div style="margin-top: 2rem;">
-                            <a href="{url router=PKP\core\PKPApplication::ROUTE_PAGE page='issue' op='archive'}"
-                                class="glass-btn glass-btn-primary" style="padding: 1rem 2.5rem; font-size: 1rem;">
-                                {translate key="plugins.themes.glassTheme.viewAllArticles"}
-                            </a>
-                        </div>
-                    </div>
                 </div>
 
                 {* ── Right Sidebar ──────────────────────────────────────────── *}
