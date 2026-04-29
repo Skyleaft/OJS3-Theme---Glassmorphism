@@ -105,11 +105,11 @@ body {
 .glass-btn-primary {
   background: var(--color-accent);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 14px rgba(var(--glass-accent-rgb), 0.4);
 }
 .glass-btn-primary:hover {
   background: var(--color-accent-dark);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.55);
+  box-shadow: 0 6px 20px rgba(var(--glass-accent-rgb), 0.55);
   transform: translateY(-1px);
 }
 .glass-btn-ghost {
@@ -142,7 +142,7 @@ body {
 }
 .glass-input:focus {
   border-color: var(--color-accent);
-  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+  box-shadow: 0 0 0 3px rgba(var(--glass-accent-rgb), 0.2);
   background: var(--glass-bg-hover);
 }
 .page-container {
@@ -377,7 +377,7 @@ body {
 .hero-orb-1 {
   width: 500px;
   height: 500px;
-  background: radial-gradient(circle, rgba(99, 102, 241, 0.35), transparent 70%);
+  background: radial-gradient(circle, rgba(var(--glass-accent-rgb), 0.35), transparent 70%);
   top: -100px;
   left: -100px;
 }
@@ -456,9 +456,9 @@ body {
   text-transform: uppercase;
 }
 .badge-accent {
-  background: rgba(99, 102, 241, 0.18);
-  color: var(--color-accent-light);
-  border: 1px solid rgba(99, 102, 241, 0.3);
+  background: var(--glass-badge-bg);
+  color: var(--glass-accent-light);
+  border: 1px solid var(--glass-badge-border);
 }
 .badge-success {
   background: rgba(16, 185, 129, 0.15);
@@ -731,7 +731,7 @@ body {
   background: var(--color-accent);
   border-color: var(--color-accent);
   color: #fff;
-  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 12px rgba(var(--glass-accent-rgb), 0.4);
 }
 .page-btn:disabled, .page-btn[aria-disabled="true"] {
   opacity: 0.4;
@@ -979,7 +979,7 @@ body {
   font-weight: 700;
   font-size: 0.75rem;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(99, 102, 241, 0.3);
+  box-shadow: 0 2px 8px rgba(var(--glass-accent-rgb), 0.3);
 }
 .user-avatar img {
   width: 100%;
@@ -1077,6 +1077,12 @@ body {
   --footer-bg: #f1f5f9 !important;
   --card-bg-inner: rgba(0, 0, 0, 0.03) !important;
   color-scheme: light;
+}
+
+[data-theme="light"] .badge-accent {
+  background: var(--glass-badge-bg) !important;
+  color: var(--glass-accent-dark) !important;
+  border-color: var(--glass-badge-border) !important;
 }
 
 /* ─── Registration Page ─── */
@@ -1382,11 +1388,11 @@ body {
   text-decoration: none;
   background: var(--color-accent);
   color: #fff;
-  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+  box-shadow: 0 4px 14px rgba(var(--glass-accent-rgb), 0.4);
 }
 .pkp_button:hover {
   background: var(--color-accent-dark);
-  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.55);
+  box-shadow: 0 6px 20px rgba(var(--glass-accent-rgb), 0.55);
   transform: translateY(-1px);
 }
 

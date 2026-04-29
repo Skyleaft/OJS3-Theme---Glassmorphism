@@ -333,6 +333,9 @@ msgstr "Aktifkan Akun"
 msgid "user.profile.editProfile"
 msgstr "Lengkapi Profil Saya"
 
+msgid "submission.pages"
+msgstr "Halaman"
+
 # ── Sidebar Options (admin) ─────────────────────────────────────────────────
 msgid "plugins.themes.glassTheme.option.yes"
 msgstr "Ya"

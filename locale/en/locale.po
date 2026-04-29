@@ -333,6 +333,9 @@ msgstr "Activate Account"
 msgid "user.profile.editProfile"
 msgstr "Edit My Profile"
 
+msgid "submission.pages"
+msgstr "Pages"
+
 # ── Sidebar Options (admin) ─────────────────────────────────────────────────
 msgid "plugins.themes.glassTheme.option.yes"
 msgstr "Yes"

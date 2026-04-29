@@ -200,10 +200,10 @@ class GlassThemePlugin extends ThemePlugin
         $colorMode = $this->getOption(self::OPTION_DEFAULT_MODE) ?? 'dark';
 
         $accentMap = [
-            'indigo' => ['#6366f1', '#4f46e5', '#a5b4fc'],
-            'violet' => ['#8b5cf6', '#7c3aed', '#c4b5fd'],
-            'emerald' => ['#10b981', '#059669', '#6ee7b7'],
-            'rose' => ['#f43f5e', '#e11d48', '#fda4af'],
+            'indigo' => ['#6366f1', '#4f46e5', '#a5b4fc', '99, 102, 241'],
+            'violet' => ['#8b5cf6', '#7c3aed', '#c4b5fd', '139, 92, 246'],
+            'emerald' => ['#10b981', '#059669', '#34d399', '16, 185, 129'],
+            'rose' => ['#f43f5e', '#e11d48', '#fda4af', '244, 63, 94'],
         ];
 
         $blurMap = [
@@ -212,7 +212,7 @@ class GlassThemePlugin extends ThemePlugin
             'heavy' => '28px',
         ];
 
-        [$base, $dark, $light] = $accentMap[$accent] ?? $accentMap['indigo'];
+        [$base, $dark, $light, $rgb] = $accentMap[$accent] ?? $accentMap['indigo'];
         $blurVal = $blurMap[$blur] ?? '16px';
 
         $defaultScheme = ($colorMode === 'dark') ? 'dark' : 'light';
@@ -222,6 +222,9 @@ class GlassThemePlugin extends ThemePlugin
     --glass-accent:       {$base} !important;
     --glass-accent-dark:  {$dark} !important;
     --glass-accent-light: {$light} !important;
+    --glass-accent-rgb:   {$rgb} !important;
+    --glass-badge-bg:     rgba({$rgb}, 0.18) !important;
+    --glass-badge-border: rgba({$rgb}, 0.3) !important;
     --glass-blur:         {$blurVal} !important;
     --glass-default-scheme: '{$defaultScheme}' !important;
 }";
