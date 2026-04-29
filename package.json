@@ -1,6 +1,6 @@
 {
   "name": "ojs-glass-theme",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Modern glassmorphism theme for OJS 3.5",
   "private": true,
   "scripts": {

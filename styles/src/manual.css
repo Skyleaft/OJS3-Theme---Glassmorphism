@@ -1335,3 +1335,62 @@ body {
 }
 
 /* --- End of File --- */
+
+
+/* override default style */
+
+.page{
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.page_title{
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 780;
+  color: var(--glass-text);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  text-align: center;
+  margin-bottom: 3rem;
+  margin-top: 3rem;
+}
+
+.pkp_button {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.375rem;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: var(--transition-glass);
+  border: none;
+  outline: none;
+  text-decoration: none;
+  background: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 4px 14px rgba(99, 102, 241, 0.4);
+}
+.pkp_button:hover {
+  background: var(--color-accent-dark);
+  box-shadow: 0 6px 20px rgba(99, 102, 241, 0.55);
+  transform: translateY(-1px);
+}
+
+.user_confirm_activation{
+  background: var(--glass-bg);
+  -webkit-backdrop-filter: blur(var(--glass-blur)) saturate(120%);
+  backdrop-filter: blur(var(--glass-blur)) saturate(120%);
+  border: 1px solid var(--glass-border);
+  border-radius: var(--radius-glass);
+  box-shadow: var(--glass-shadow);
+  transition: var(--transition-glass);
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  margin-top: 4rem;
+}
+
